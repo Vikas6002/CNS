@@ -6,3 +6,5 @@
         c.init(Cipher.DECRYPT_MODE, keySpec);
         byte[] dec = c.doFinal(enc);
         String decrypted = new String(dec);
+
+        keytool -genkeypair -alias mykey -keyalg Blowfish -keysize 128 -keystore mykey.jks
