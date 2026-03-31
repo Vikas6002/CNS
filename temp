@@ -1,0 +1,8 @@
+        c.init(Cipher.ENCRYPT_MODE,keySpec);
+        byte [] enc=c.doFinal(text.getBytes());
+        String encrypted=Base64.getEncoder().encodeToString(enc);
+
+        // Decrypt
+        c.init(Cipher.DECRYPT_MODE, keySpec);
+        byte[] dec = c.doFinal(enc);
+        String decrypted = new String(dec);
