@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <title>Diffie-Hellman Key Exchange</title>
+</head>
+
+<body>
+
+    <h2>Diffie-Hellman Key Exchange</h2>
+
+    <!-- Inputs -->
+    <label>Prime Number (p): </label>
+    <input type="number" id="p" value="23"><br><br>
+
+    <label>Primitive Root (g): </label>
+    <input type="number" id="g" value="5"><br><br>
+
+    <label>Alice Private Key (a): </label>
+    <input type="number" id="a" value="6"><br><br>
+
+    <button onclick="generate()">Generate Keys</button>
+
+    <h3 id="output"></h3>
+
+    <script>
+        function power(base, exp, mod) {
+            let result = 1;
+            for (let i = 0; i < exp; i++) {
+                result = (result * base) % mod;
+            }
+            return result;
+        }
+
+        function generate() {
+
+            let p = parseInt(document.getElementById("p").value);
+            let g = parseInt(document.getElementById("g").value);
+            let a = parseInt(document.getElementById("a").value);
+
+            // Bob private key (random)
+            let b = Math.floor(Math.random() * 10) + 1;
+
+            // Public keys
+            let A = power(g, a, p); // Alice
+            let B = power(g, b, p); // Bob
+
+            // Shared secret
+            let keyAlice = power(B, a, p);
+            let keyBob = power(A, b, p);
+
+            document.getElementById("output").innerHTML =
+                "Alice Public Key: " + A + "<br>" +
+                "Bob Public Key: " + B + "<br>" +
+                "Shared Key (Alice): " + keyAlice + "<br>" +
+                "Shared Key (Bob): " + keyBob;
+        }
+    </script>
+
+</body>
+
+</html>
