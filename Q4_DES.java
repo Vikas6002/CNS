@@ -1,9 +1,7 @@
 
 import java.util.*;
 import javax.crypto.*;
-
 public class Q4_DES {
-
     public static void main(String[] args) throws Exception {
 
         String text="HEllo";

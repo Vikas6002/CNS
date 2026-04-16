@@ -33,7 +33,6 @@ public class Q3_2_Subtitution {
         }
         return result;
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

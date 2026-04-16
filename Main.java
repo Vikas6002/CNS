@@ -1,7 +1,7 @@
 import java.security.*;
 public class Main {
     public static void main(String[] args) throws Exception {
-        String msg = "Banking Transaction Data";
+        String msg = "Hello";
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         byte[] hash = md.digest(msg.getBytes());
         StringBuilder sb = new StringBuilder();

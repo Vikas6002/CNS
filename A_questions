@@ -1,0 +1,28 @@
+ SIMPLE PROGRAMS:
+1.	Write a C program that contains a string (char pointer) with a value ‘Hello world’. The program should AND or and XOR each character in this string with 127 and display the result.
+2.	Write a Java program to implement the DES algorithm logic.
+3.	Write a C/JAVA program to implement the Rijndael algorithm logic.
+4.	Write a Java program to implement RSA Algorithm.
+5.	Calculate the message digest of a text using the SHA-1 algorithm in JAVA.
+6.	Calculate the message digest of a text using the MD5 algorithm in JAVA
+
+
+COMPLEX PROGRAMS:
+1.	Write a Java program to perform encryption and decryption using the following algorithms:
+a)	Ceaser Cipher
+2.	Write a Java program to perform encryption and decryption using the following algorithms:
+a)	Substitution Cipher
+3.	Write a Java program to perform encryption and decryption using the following algorithms:
+a)	Hill Cipher
+4.	Write a C/JAVA program to implement the BlowFish algorithm logic.
+5.	Using Java Cryptography, encrypt the text “Hello world” using Blow Fish. Create your own key using Java key tool.
+6.	Implement the Diffie-Hellman Key Exchange mechanism using HTML and JavaScript. Consider the end user as one of the parties (Alice) and the JavaScript application as other party (bob).
+
+
+
+Additional programs:
+1. Write a java program to implement IDEA algorithm.
+2. Write a java program to perform encryption and decryption using mono alphabet.
+3. Write a java program to perform encryption and decryption using poly alphabet.
+4. Write a java program to perform encryption and decryption using play cipher.
+5. Write a java program to perform encryption and decryption by using knapsack problem

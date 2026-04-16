@@ -1,6 +1,4 @@
-
 import java.util.*;
-
 public class Q3_1_Ceaser {
 
     static String encrypt(String text, int shift) {
@@ -9,7 +7,7 @@ public class Q3_1_Ceaser {
         for (char c : text.toCharArray()) {
             if (Character.isLetter(c)) {
                 char base = Character.isUpperCase(c) ? 'A' : 'a';
-                result += (char) ((c - base + shift) % 26 + base);
+                result += (char)(c - base + shift) % 26 + base;
             } else {
                 result += c;
             }
