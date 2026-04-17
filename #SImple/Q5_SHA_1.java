@@ -1,24 +1,23 @@
+import java.security.MessageDigest;
 
-import java.util.Base64;
-import javax.crypto.*;
-
-
-public class Q4_BlowFish {
-    public static void main(String[] args) throws Exception{
-        String mes ="Hello World";
-        KeyGenerator kg=KeyGenerator.getInstance("Blowfish");
-        SecretKey key = kg.generateKey();
-
-        Cipher c=Cipher.getInstance("Blowfish");
-        c.init(c.ENCRYPT_MODE, key);
-        byte [] en = c.doFinal(mes.getBytes());
-        String e=Base64.getEncoder().encodeToString(en);
-
-
-        c.init(c.DECRYPT_MODE, key);
-        byte[] dn = c.doFinal(e.getBytes());
-        String d = new String(dn);
-
-        System.out.println("Encrypted : " + e + "\n Decrepted : " + d);
+public class Q10_SHA {
+    public static String hash(String input) throws Exception {
+        MessageDigest md = MessageDigest.getInstance("SHA-1");
+        byte[] messageDigest = md.digest(input.getBytes());
+        StringBuilder hexString = new StringBuilder();
+        for (byte b : messageDigest) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        return hexString.toString();
+    }
+    public static void main(String[] args) throws Exception {
+        String message = "Banking Transaction Data";
+        String hashedMessage = hash(message);
+        System.out.println("Original: " + message);
+        System.out.println("SHA-1   : " + hashedMessage);
     }
 }
